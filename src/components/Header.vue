@@ -187,7 +187,9 @@
         width: 100%;
         height: 320px;
         background-image: url("../assets/images/cover1.png");
+        background-size: center;
         background-position: center  -100px;
+        background-repeat: no-repeat;
     }
 </style>
 <script>

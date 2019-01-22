@@ -98,6 +98,7 @@ body {
 }
 ul{
   list-style: none;
+  padding: 0;
 }
 #index {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -129,6 +130,7 @@ ul{
   }
 }
   .right_f {
+    z-index: 99999;
     cursor: pointer;
     position: fixed;
     width: 40px;

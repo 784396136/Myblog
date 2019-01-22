@@ -16,7 +16,7 @@ export default new Router({
           {
             // 首页
             path: '',
-            name: 'home',
+            name: '',
             component: () => import('./views/Index/Home.vue'),
             children: [
               {
@@ -34,6 +34,12 @@ export default new Router({
             ]
           }
         ]
+    },
+    {
+      // 登录
+      path: '/login',
+      name: '',
+      component: () => import('./views/Login.vue')
     }
   ]
 })
