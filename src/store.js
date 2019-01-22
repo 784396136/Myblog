@@ -8,7 +8,10 @@ export default new Vuex.Store({
 
   },
   mutations: {
-
+    // 点击滚轮到正文区域
+    content(){
+      $("html,body").animate({scrollTop:'270px'},650)
+    }
   },
   actions: {
 
