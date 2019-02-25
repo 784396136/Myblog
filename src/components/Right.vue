@@ -201,8 +201,10 @@ export default {
 }
 /* 右侧盒子 */
 #right {
+    position: relative;
     float: right;
     width: 30%;
+    padding-bottom: 15px;
 }
 #right .children {
     background-color: #fff;
@@ -210,6 +212,9 @@ export default {
     margin-bottom: 15px;
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
     overflow: hidden;
+}
+#right .children:last-child {
+    margin-bottom: 0;
 }
 /* 用户信息S */
 #right .userInfo {

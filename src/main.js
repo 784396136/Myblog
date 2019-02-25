@@ -6,7 +6,11 @@ import store from './store'
 // 引入UI
 import MuseUI from 'muse-ui';
 import 'muse-ui/dist/muse-ui.css';
+// 引入ajax
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
+Vue.use(VueAxios,axios);
 Vue.config.productionTip = false
 Vue.use(MuseUI);
 

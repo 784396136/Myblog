@@ -2,13 +2,19 @@
     <div>
         <div class="data">
             <div class="info">
+                <!-- 日志封面 -->
                 <router-link to="/content" style="float:left;width:30%;">
-                    <img class="cover" src="../../../assets/images/img.jpeg">
+                    <img class="cover to" src="../../../assets/images/img.jpeg">
                 </router-link>
                 <div class="top">
-                    <router-link to="">日常</router-link>
-                    <h2 style="display:inline;margin:0;margin-left:5px;">日常cos蕾姆 蕾姆世界第一可爱 ٩(๑>◡<๑)۶ </h2>
+                    <!-- 日志标签 -->
+                    <router-link to="/aaa" class="tag to">日常</router-link>
+                    <!-- 标题 -->
+                    <router-link to="/content">
+                        <h2 style="display:inline;margin:0;margin-left:5px;" class="to">日常cos蕾姆 蕾姆世界第一可爱 ٩(๑>◡<๑)۶ </h2>
+                    </router-link>
                 </div>
+                <!-- 日志简介 -->
                 <div class="content">
                     我不管 蕾姆最可爱 蕾姆赛高 ヾ(◍°∇°◍)ﾉﾞヾ(◍°∇°◍)ﾉﾞ
                 </div>
@@ -37,22 +43,28 @@
                     </span>
                 </div>
                 <div class="f_right">
-                    <span style="margin:0;">
-                        阅读全文<mu-icon value="keyboard_arrow_right" size="15" style="vertical-align: sub;"></mu-icon>&nbsp;
-                    </span>
+                    <router-link to="/content">
+                        <span style="margin:0;" class="to">
+                            阅读全文<mu-icon value="keyboard_arrow_right" size="15" style="vertical-align: sub;"></mu-icon>&nbsp;
+                        </span>
+                    </router-link>
                 </div>
             </div>
         </div>
         <div class="data">
             <div class="info">
                 <router-link to="/content" style="float:left;width:30%;">
-                <img class="cover" src="../../../assets/images/cover2.png">
+                    <img class="cover to" src="../../../assets/images/cover2.png">
                 </router-link>
                 <div class="top">
-                    <router-link to="">日常</router-link>
-                    <h2 style="display:inline;margin:0;margin-left:5px;">日常cos蕾姆 蕾姆世界第一可爱 ٩(๑>◡<๑)۶</h2>
+                    <router-link to="" class="tag to">日常</router-link>
+                    <router-link to="/content">
+                        <h2 style="display:inline;margin:0;margin-left:5px;" class="to">日常cos蕾姆 蕾姆世界第一可爱 ٩(๑>◡<๑)۶</h2>
+                    </router-link>
                 </div>
                 <div class="content">
+                    此主题为收费主题,此分享主题不适合任何有道德绑架倾向的组织和个人下载，如确有必要，请检查自身电脑授权、软件授权等等，确认未使用破解软件后，方可。 正版主题购买地址：https://www.ihewro.com/archi…
+                    此主题为收费主题,此分享主题不适合任何有道德绑架倾向的组织和个人下载，如确有必要，请检查自身电脑授权、软件授权等等，确认未使用破解软件后，方可。 正版主题购买地址：https://www.ihewro.com/archi…
                     此主题为收费主题,此分享主题不适合任何有道德绑架倾向的组织和个人下载，如确有必要，请检查自身电脑授权、软件授权等等，确认未使用破解软件后，方可。 正版主题购买地址：https://www.ihewro.com/archi…
                 </div>
             </div>
@@ -75,14 +87,16 @@
                         <mu-icon value="thumb_up_alt" size="15" style="vertical-align: sub;"></mu-icon>&nbsp; 0人点赞
                     </span>
                     <!-- 作者 -->
-                    <span>
+                    <span class="to">
                         <mu-icon value="perm_identity" size="15" style="vertical-align: sub;"></mu-icon>&nbsp;蕾姆の永远
                     </span>
                 </div>
                 <div class="f_right">
-                    <span style="margin:0;">
-                        阅读全文<mu-icon value="keyboard_arrow_right" size="15" style="vertical-align: sub;"></mu-icon>&nbsp;
-                    </span>
+                    <router-link to="/content">
+                        <span style="margin:0;" class="to">
+                            阅读全文<mu-icon value="keyboard_arrow_right" size="15" style="vertical-align: sub;"></mu-icon>&nbsp;
+                        </span>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -92,8 +106,10 @@
                 <img class="cover" src="../../../assets/images/cover1.png">
                 </router-link>
                 <div class="top">
-                    <router-link to="">日常</router-link>
-                    <h2 style="display:inline;margin:0;margin-left:5px;">日常cos蕾姆 蕾姆世界第一可爱 ٩(๑>◡<๑)۶</h2>
+                    <router-link to="" class="tag">日常</router-link>
+                    <router-link to="/content">
+                        <h2 style="display:inline;margin:0;margin-left:5px;">日常cos蕾姆 蕾姆世界第一可爱 ٩(๑>◡<๑)۶</h2>
+                    </router-link>
                 </div>
             </div>
             <div class="info_f"></div>
@@ -104,7 +120,33 @@
                 <img class="cover" src="../../../assets/images/cover5.jpg">
                 </router-link>
                 <div class="top">
-                    <router-link to="">日常</router-link>
+                    <router-link to="" class="tag">日常</router-link>
+                    <router-link to="/content">
+                        <h2 style="display:inline;margin:0;margin-left:5px;">[已失效]国际版抖音TIKTOK，150国家解锁版，更新IOS版</h2>
+                    </router-link>
+                </div>
+            </div>
+            <div class="info_f"></div>
+        </div>
+        <div class="data">
+            <div class="info">
+                <router-link to="/content" style="float:left;width:30%;">
+                <img class="cover" src="../../../assets/images/cover5.jpg">
+                </router-link>
+                <div class="top">
+                    <router-link to="" class="tag">日常</router-link>
+                    <h2 style="display:inline;margin:0;margin-left:5px;">[已失效]国际版抖音TIKTOK，150国家解锁版，更新IOS版</h2>
+                </div>
+            </div>
+            <div class="info_f"></div>
+        </div>
+        <div class="data">
+            <div class="info">
+                <router-link to="/content" style="float:left;width:30%;">
+                <img class="cover" src="../../../assets/images/cover5.jpg">
+                </router-link>
+                <div class="top">
+                    <router-link to="" class="tag">日常</router-link>
                     <h2 style="display:inline;margin:0;margin-left:5px;">[已失效]国际版抖音TIKTOK，150国家解锁版，更新IOS版</h2>
                 </div>
             </div>
@@ -112,6 +154,16 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    mounted() {
+        // 点击后滚动条到正文
+        $('.to').click(function(){
+            $("html,body").animate({scrollTop:'270px'},650)
+        })
+    }
+}
+</script>
 <style scoped>
 @media screen and (max-width: 990px){
   .right {
@@ -138,7 +190,7 @@
       width: 100% !important;
       height: auto !important;
   }
-  .left .data .info .top a {
+  .left .data .info .top .tag {
       display: none !important;
   }
   .left .data .info .top {
@@ -174,11 +226,15 @@
   width: 67%;
 }
 .left .data {
-  overflow: hidden;
-  height: 220px;
-  margin-bottom:15px;
-  transition: all .5s;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    background-color: #fff;
+    overflow: hidden;
+    height: 220px;
+    margin-bottom:15px;
+    transition: all .5s;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+.left .data:last-child {
+    margin-bottom: 0;
 }
 .left .data:hover {
   box-shadow: 0 8px 15px rgba(146,146,146,.39);
@@ -209,11 +265,17 @@
 .left .data .info_f .f_right {
     float: right;
 }
+.left .data .info_f .f_right a {
+    color: #2c3e50; 
+}
 .left .data .info .top {
   float: left;
   width: 65%;
   text-align: left;
   margin-left: 20px;
+}
+.left .data .info .top a{
+    color: #2c3e50;
 }
 .left .data .info .cover {
     float: left;
@@ -222,7 +284,7 @@
     padding: 1px;
     border: 1px solid #f3f3f3;
 }
-.left .data .info .top a {
+.left .data .info .top .tag {
   display: inline-block;
   padding: 4px 6px;
   font-size: 12px;
@@ -236,7 +298,7 @@
   position: relative;
   top: -3px;
 }
-.left .data .info .top a::after {
+.left .data .info .top .tag::after {
   position: absolute;
   width: 0;
   height: 0;
@@ -261,7 +323,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow:hidden;
     text-align: left;
@@ -271,5 +333,4 @@
     font-size: 15px;
     color: rgb(130, 130, 130);
 }
-
 </style>

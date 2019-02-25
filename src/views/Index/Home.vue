@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- 左侧内容 -->
-        <div class="left" @click="$store.commit('content')">
+        <div class="left">
             <router-view></router-view>
         </div>
         
@@ -25,5 +25,7 @@ export default {
 .left {
   float: left;
   width: 67%;
+  padding-bottom: 15px;
+  overflow: hidden;
 }
 </style>

@@ -162,8 +162,8 @@ if(!norunFlag){
 	function showHitokoto(){
 		if(sessionStorage.getItem("Sleepy")!=="1"){
 			if(!AITalkFlag){
-				// 网络的经典语句
-				$.getJSON('https://sslapi.hitokoto.cn/',function(result){
+				// 网络的经典语句	https://sslapi.hitokoto.cn/
+				$.getJSON('https://api.fczbl.vip/hitokoto/?encode=json',function(result){
 					talkValTimer();
 					showMessage(result.hitokoto, 0);
 				});
