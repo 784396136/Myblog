@@ -53,8 +53,8 @@
         </div>
         <!-- 上一页 下一页 -->
         <div class="page">
-            <router-link to="/" class="to prev" title="上一页的标题" v-html="'< 上一页'"></router-link>
-            <router-link to="/" class="to next" title="下一页的标题" v-html="'下一页 >'"></router-link>
+            <router-link to="/content" class="to prev" title="上一页的标题" v-html="'< 上一页'"></router-link>
+            <router-link to="/content" class="to next" title="下一页的标题" v-html="'下一页 >'"></router-link>
         </div>
     </div>
 </template>
@@ -69,6 +69,14 @@ export default {
 }
 </script>
 <style scoped>
+    @media screen and (max-width: 530px){
+        .box header .info:nth-child(6){
+            display: none;
+        }
+        .box header .info:nth-child(5){
+            display: none;
+        }
+    }
     h1 {
         font-weight: 400;
         color: #333;

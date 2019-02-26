@@ -20,6 +20,12 @@ export default new Router({
             component: () => import('./views/Index/Home.vue'),
             children: [
               {
+                // 测试
+                path: 'test',
+                name: 'test',
+                component: () => import('./views/Index/Home/Test.vue')
+              },
+              {
                 // 首页
                 path: '',
                 name: 'index',
@@ -30,6 +36,12 @@ export default new Router({
                 path: 'content',
                 name: 'content',
                 component: () => import('./views/Index/Home/Content.vue')
+              },
+              {
+                // 搜索页
+                path: 'search',
+                name: 'search',
+                component: () => import('./views/Index/Home/Search.vue')
               }
             ]
           }

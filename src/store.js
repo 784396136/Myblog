@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    search_info: '',
   },
   mutations: {
     // 点击滚轮到正文区域

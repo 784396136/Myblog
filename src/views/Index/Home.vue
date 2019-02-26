@@ -9,7 +9,9 @@
 </template>
 <script>
 export default {
-  
+  created() {
+    console.log(this.$router)
+  }
 }
 </script>
 <style scoped>
@@ -25,7 +27,5 @@ export default {
 .left {
   float: left;
   width: 67%;
-  padding-bottom: 15px;
-  overflow: hidden;
 }
 </style>

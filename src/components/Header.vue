@@ -1,40 +1,40 @@
 <template>
     <div>
         <header>
-            <mu-container>
+            <mu-container style="height:100%;">
                 <ul id="nav">
                     <li>
-                        <mu-button flat color="#f3e5f5" class="home">
+                        <mu-button flat color="#f3e5f5" class="home to" to="/" style="height:100%;">
                             <mu-icon size="24" value="home" style="margin-right:5px;"></mu-icon>
                             主页
                         </mu-button>
                     </li>
                     <li>
-                        <mu-button flat color="#f3e5f5">
+                        <mu-button flat color="#f3e5f5" style="height:100%;">
                             <mu-icon value="person" style="margin-right:5px;"></mu-icon>
                             关于
                         </mu-button>
                     </li>
                     <li>
-                        <mu-button flat color="#f3e5f5">
+                        <mu-button flat color="#f3e5f5" style="height:100%;">
                             <mu-icon size="24" value="local_offer" style="margin-right:5px;"></mu-icon>
                             标签
                         </mu-button>
                     </li>
                     <li>
-                        <mu-button flat color="#f3e5f5">
+                        <mu-button flat color="#f3e5f5" style="height:100%;">
                             <mu-icon value="apps" style="margin-right:5px;"></mu-icon>
                             分类
                         </mu-button>
                     </li>
                     <li>
-                        <mu-button flat color="#f3e5f5">
+                        <mu-button flat color="#f3e5f5" style="height:100%;">
                             <mu-icon value="event_note" style="margin-right:5px;"></mu-icon>
                             时间轴
                         </mu-button>
                     </li>
                     <li>
-                        <mu-button flat color="#f3e5f5">
+                        <mu-button flat color="#f3e5f5" style="height:100%;">
                             <mu-icon value="group" style="margin-right:5px;"></mu-icon>
                             友链
                         </mu-button>
@@ -51,7 +51,7 @@
                 </mu-button>
                 <ul>
                     <li>
-                        <mu-button flat class="nav_btn home">
+                        <mu-button flat to="/" class="nav_btn home to_sm">
                             <mu-icon value="home" left style="float:left;"></mu-icon>
                             主页
                         </mu-button>
@@ -138,7 +138,7 @@
 
     header ul {
         margin: 0;
-        margin-top: 7px;
+        height: 100%;
         overflow: hidden;
     }
     /* 小屏显示的按钮 */
@@ -182,6 +182,7 @@
 
     header ul li {
         float: left;
+        height: 100%;
     }
     .cover {
         width: 100%;

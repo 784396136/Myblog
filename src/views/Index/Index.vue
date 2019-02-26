@@ -15,7 +15,7 @@
       </div>
       <div class="searchbox right_f">
           <mu-icon value="search" color="#fff" style="margin:8px;float:left;"></mu-icon>
-          <input type="text" placeholder="Search...">
+          <input type="text" placeholder="Search..." @keyup.enter="search" v-model="search_con">
       </div>
     <!-- 页脚 -->
     <foot/>
@@ -28,6 +28,11 @@ import Foot from '../../components/Footer.vue'
 export default {
   components: {
     Top,Right,Foot
+  },
+  data() {
+    return {
+      search_con: '',
+    }
   },
   mounted() {
     
@@ -45,21 +50,32 @@ export default {
         var right = document.querySelector("#right")
         // 右侧盒子
         if(t>=290){
-          // 获取大盒子的高
-          var hezi = document.querySelector(".hezi")
-          var h = hezi.clientHeight
+          // 获取大盒子的高并判断是否有翻页盒子
+          var hezi = document.querySelector(".left")
+          var pageBox = document.querySelector("#pageList")
+          if(pageBox)
+            var h = hezi.clientHeight - pageBox.clientHeight
+          else
+            var h = hezi.clientHeight
+
           // 计算最大top值
           var right_h = right.clientHeight
           var max_top = h-right_h
           var top_value = (t-290)+20
-          if(max_top>top_value)
+          if(max_top>0)
           {
-            document.querySelector("#right").style.top = top_value+'px'
+            if(max_top>top_value)
+            {
+              document.querySelector("#right").style.top = top_value+'px'
+            }
+            else
+            {
+              document.querySelector("#right").style.top = max_top+'px'
+            }
           }
           else
-          {
-            document.querySelector("#right").style.top = max_top+'px'
-          }
+            document.querySelector("#right").style.top = '0px'
+          
         }
         else
           document.querySelector("#right").style.top = '0px'
@@ -79,8 +95,23 @@ export default {
       var t =document.documentElement.scrollTop||document.body.scrollTop;
       $("html,body").animate({scrollTop:'0px'},650)
     })
+    // 点击后滚动条到正文
+    $('.to').click(function(){
+        $("html,body").animate({scrollTop:'270px'},650)
+    })
+    $('.to_sm').click(function(){
+        $("html,body").animate({scrollTop:'320px'},650)
+    })
   },
-  methods: {},
+  methods: {
+    search() {
+      this.$store.state.search_info = this.search_con
+      $("html,body").animate({scrollTop:'270px'},650)
+      var url = this.$router.history.current.fullPath
+      if(url != '/search')
+        this.$router.push('search')
+    }
+  },
 }
 </script>
 <style scoped>
@@ -88,6 +119,7 @@ export default {
 .hezi {
   overflow: hidden;
   margin-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 #index {
@@ -125,7 +157,7 @@ export default {
     position: fixed;
     width: 40px;
     height: 40px;
-    background-color: #848484;
+    background-color: #a2a2a2;
     right:30px;
   }
   .searchbox {
@@ -140,7 +172,7 @@ export default {
     color:#fff;
     outline:none;
     border:none;
-    background-color: #848484;
+    background-color: #a2a2a2;
   }
   .searchbox input::-webkit-input-placeholder {
     color:#fff;

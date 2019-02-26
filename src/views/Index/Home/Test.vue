@@ -1,15 +1,18 @@
 <template>
     <div>
-        <log-list :data="15"></log-list>
-        <page-list></page-list>
+        <log-list></log-list>
     </div>
 </template>
 <script>
 import logList from "../../../components/LogList.vue"
-import pageList from "../../../components/PageList.vue"
 export default {
     components:{
-        logList,pageList
+        logList
     },
+    data() {
+        return {
+            test: '',
+        }
+    }
 }
 </script>

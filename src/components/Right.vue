@@ -204,7 +204,6 @@ export default {
     position: relative;
     float: right;
     width: 30%;
-    padding-bottom: 15px;
 }
 #right .children {
     background-color: #fff;
