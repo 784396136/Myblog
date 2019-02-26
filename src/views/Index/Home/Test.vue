@@ -1,14 +1,14 @@
 <template>
     <div>
-        <log-list></log-list>
+        <h1>测试页面</h1>
+        <mu-container class="nprogress-wrap">
+            <mu-button color="primary" @click="$progress.start();">start</mu-button>
+            <mu-button color="secondary" @click="$progress.done();">Done</mu-button>
+        </mu-container>
     </div>
 </template>
 <script>
-import logList from "../../../components/LogList.vue"
 export default {
-    components:{
-        logList
-    },
     data() {
         return {
             test: '',
@@ -16,3 +16,8 @@ export default {
     }
 }
 </script>
+<style>
+.nprogress-wrap .mu-button{
+  margin: 6px 8px;
+}
+</style>

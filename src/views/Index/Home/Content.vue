@@ -60,6 +60,10 @@
 </template>
 <script>
 export default {
+    created() {
+        // 关闭进度条
+        this.$progress.done()
+    },
     mounted() {
         // 点击后滚动条到正文
         $('.to').click(function(){

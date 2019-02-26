@@ -5,9 +5,9 @@
                 <ul id="nav">
                     <li>
                         <mu-button flat color="#f3e5f5" class="home to" to="/" style="height:100%;">
-                            <mu-icon size="24" value="home" style="margin-right:5px;"></mu-icon>
+                            <i class="fa fa-home fa-lg" style="margin-right:5px;"></i>
                             主页
-                        </mu-button>
+                        </mu-button> 
                     </li>
                     <li>
                         <mu-button flat color="#f3e5f5" style="height:100%;">
@@ -17,7 +17,7 @@
                     </li>
                     <li>
                         <mu-button flat color="#f3e5f5" style="height:100%;">
-                            <mu-icon size="24" value="local_offer" style="margin-right:5px;"></mu-icon>
+                            <i class="fa fa-tags fa-lg" style="margin-right:5px;"></i>
                             标签
                         </mu-button>
                     </li>

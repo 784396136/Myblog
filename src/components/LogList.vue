@@ -348,7 +348,9 @@ export default {
         // 点击后滚动条到正文
         $('.to').click(function(){
             $("html,body").animate({scrollTop:'270px'},650)
-        })
+            // 加载进度条开始
+            this.$progress.start()
+        }.bind(this))
     }
 }
 </script>
