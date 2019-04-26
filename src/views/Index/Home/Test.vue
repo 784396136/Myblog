@@ -1,9 +1,13 @@
 <template>
     <div>
-        <h1>测试页面</h1>
-        <mu-container class="nprogress-wrap">
-            <mu-button color="primary" @click="$progress.start();">start</mu-button>
-            <mu-button color="secondary" @click="$progress.done();">Done</mu-button>
+        <mu-container>
+            <mu-flex justify-content="center">
+                <mu-button @click="openSimpleDialog">Open Dialog</mu-button>
+            </mu-flex>
+            <mu-dialog title="Dialog" width="360" :open.sync="openSimple">
+                this is simple Dialog
+                <mu-button slot="actions" flat color="primary" @click="closeSimpleDialog">Close</mu-button>
+            </mu-dialog>
         </mu-container>
     </div>
 </template>
@@ -12,6 +16,15 @@ export default {
     data() {
         return {
             test: '',
+            openSimple: false
+        }
+    },
+    methods :{
+        openSimpleDialog () {
+        this.openSimple = true;
+        },
+        closeSimpleDialog () {
+        this.openSimple = false;
         }
     }
 }

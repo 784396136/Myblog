@@ -8,6 +8,9 @@
 import logList from "../../../components/LogList.vue"
 import pageList from "../../../components/PageList.vue"
 export default {
+    created() {
+        this.$progress.done()
+    },
     components:{
         logList,pageList
     },

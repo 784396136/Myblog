@@ -38,9 +38,23 @@
                     本文章仅为个人理解
                 </div>
                 <div class="btns">
-                    <a href="javascript:;" class="donate"><mu-icon value="local_atm" style="margin-top:7px;vertical-align: bottom;"></mu-icon> 打赏</a>
+                    <a href="#" class="donate" @click.prevent="openReward"><mu-icon value="local_atm" style="margin-top:7px;vertical-align: bottom;"></mu-icon> 打赏</a>
                     <a href="javascript:;" class="love"><mu-icon value="thumb_up" style="margin-top:7px;vertical-align: bottom;"></mu-icon> 点赞</a>
                 </div>
+                <mu-dialog width="360" :open.sync="reward" class="reward">
+                    <div class="title">
+                        打赏作者
+                        <i class="fa fa-close" style="float:right;margin-top:12px;cursor:pointer;" @click="closeReward"></i>
+                    </div> 
+                    <h3 style="margin:12px 0;color:#333;font-size:16px;font-weight:600;text-align:center;">扫码支付</h3>
+                    <!-- 二维码 -->
+                    <img v-show="pay_type==true" style="display:block;width:200px;height:200px;margin:0 auto;" src="../../../assets/images/alipay.png">
+                    <img v-show="pay_type==false" style="display:block;width:200px;height:200px;margin:0 auto;" src="../../../assets/images/wxpay.png">
+                    <div class="reward_btn">
+                        <div :class="{active:pay_type==true}" @click="pay_type=true"><img style="height:26px;" src="../../../assets/images/alipay_btn.png"></div> 
+                        <div :class="{active:pay_type==false}" @click="pay_type=false"><img style="height:26px;" src="../../../assets/images/wechat_btn.png"></div> 
+                    </div>
+                </mu-dialog>
                 <!-- 文章标签 -->
                 <div class="last">
                     <i class="fa fa-tags fa-lg"></i>
@@ -60,6 +74,14 @@
 </template>
 <script>
 export default {
+    data() {
+        return {
+            // 控制打赏窗口是否打开
+            reward: false,
+            // 支付方式 true是支付宝 false是微信
+            pay_type: true,
+        }
+    },
     created() {
         // 关闭进度条
         this.$progress.done()
@@ -69,10 +91,50 @@ export default {
         $('.to').click(function(){
             $("html,body").animate({scrollTop:'270px'},650)
         })
+    },
+    methods: {
+        // 打开窗口
+        openReward() {
+            this.reward = true
+        },
+        // 关闭窗口
+        closeReward() {
+            this.reward = false
+        }
     }
 }
 </script>
 <style scoped>
+    .reward .title {
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #eee;
+        line-height: 40px;
+        padding: 0 25px;
+        background-color: #f8f8f8;
+    }
+    .reward .reward_btn div{
+        cursor: pointer;
+        text-align: center;
+        width: 45%;
+        height: 45px;
+        border: 1px solid #e6e6e6;
+        display: inline-block;
+    }
+    .reward .reward_btn .active {
+        border: 1px solid #0092ee;
+    }
+    .reward .reward_btn div:last-child {
+        float:right;
+    }
+    .reward .reward_btn {
+
+        width: 80%;
+        margin: 20px auto;
+    }
+    .reward .reward_btn div img {
+        margin-top: 8.5px;
+    }
     @media screen and (max-width: 530px){
         .box header .info:nth-child(6){
             display: none;

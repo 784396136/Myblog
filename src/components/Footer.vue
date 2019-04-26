@@ -17,8 +17,13 @@ export default {
         }
     },
     created() {
-        this.axios.get("https://api.fczbl.vip/hitokoto/?encode=json").then((res)=>{
+        // 备用端口     https://v1.hitokoto.cn/?encode=json
+        this.axios.get("https://v1.hitokoto.cn/?encode=json").then((res)=>{
             this.hitokoto = res.data.hitokoto
+        }).catch((res)=>{
+            this.axios.get("https://api.fczbl.vip/hitokoto/?encode=json").then((res)=>{
+                this.hitokoto = res.data.hitokoto
+            })
         })
     }
 }

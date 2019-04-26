@@ -38,7 +38,8 @@ export default {
     
   },
   created() {
-
+    var re = /x/;
+    this.$progress.done()
     // 返回页面顶端按钮的显示与隐藏
     window.addEventListener("scroll",function(){
       var t =document.documentElement.scrollTop||document.body.scrollTop;

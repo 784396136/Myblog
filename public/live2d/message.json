@@ -35,6 +35,10 @@
         {
             "selector":".backTop",
             "text":["点击返回顶部哦~"]
+        },
+        {
+            "selector":".donate",
+            "text":["要打赏么(～￣▽￣)～ "]
         }
     ],
     "click": [

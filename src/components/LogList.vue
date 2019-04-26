@@ -103,7 +103,7 @@
         <div class="data">
             <div class="info">
                 <router-link to="/content" style="float:left;width:30%;">
-                <img class="cover" src="../assets/images/cover1.png">
+                <img class="cover" src="../assets/images/2e9cca895758b490838ad73c6daf5859caec09d5.jpeg">
                 </router-link>
                 <div class="top">
                     <router-link to="" class="tag">日常</router-link>
@@ -117,7 +117,7 @@
         <div class="data">
             <div class="info">
                 <router-link to="/content" style="float:left;width:30%;">
-                <img class="cover" src="../assets/images/cover5.jpg">
+                <img class="cover" src="../assets/images/a0656101763a68a4bcb3fe603496037c253e106d.jpeg">
                 </router-link>
                 <div class="top">
                     <router-link to="" class="tag">日常</router-link>
@@ -131,7 +131,7 @@
         <div class="data">
             <div class="info">
                 <router-link to="/content" style="float:left;width:30%;">
-                <img class="cover" src="../assets/images/cover5.jpg">
+                <img class="cover" src="../assets/images/6898172be09f10db4e70590209a76896f53e4024.jpeg">
                 </router-link>
                 <div class="top">
                     <router-link to="" class="tag">日常</router-link>
@@ -143,7 +143,7 @@
         <div class="data">
             <div class="info">
                 <router-link to="/content" style="float:left;width:30%;">
-                <img class="cover" src="../assets/images/cover5.jpg">
+                <img class="cover" src="../assets/images/ee8a92bf1f097fc10ab40329693dfb2816cef394.jpeg">
                 </router-link>
                 <div class="top">
                     <router-link to="" class="tag">日常</router-link>
@@ -155,7 +155,7 @@
         <div class="data">
             <div class="info">
                 <router-link to="/content" style="float:left;width:30%;">
-                <img class="cover" src="../assets/images/cover5.jpg">
+                <img class="cover" src="../assets/images/lamuleimu.png">
                 </router-link>
                 <div class="top">
                     <router-link to="" class="tag">日常</router-link>
@@ -167,7 +167,7 @@
         <div class="data">
             <div class="info">
                 <router-link to="/content" style="float:left;width:30%;">
-                <img class="cover" src="../assets/images/cover5.jpg">
+                <img class="cover" src="../assets/images/20190222204410.jpg">
                 </router-link>
                 <div class="top">
                     <router-link to="" class="tag">日常</router-link>
@@ -342,7 +342,8 @@
 export default {
     props:["data"],
     created() {
-        console.log(this.data)
+        // 关闭进度条
+        this.$progress.done()
     },
     mounted() {
         // 点击后滚动条到正文
