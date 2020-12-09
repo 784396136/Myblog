@@ -8,11 +8,7 @@
     </div>
 </template>
 <script>
-export default {
-  created() {
-    
-  }
-}
+export default {}
 </script>
 <style scoped>
 @media screen and (max-width: 990px){
